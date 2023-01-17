@@ -1,0 +1,34 @@
+version: '3.0'
+services:
+    productpage:
+      image: 48/productpage
+      container_name: 48-productpage
+      ports:
+         - '9080:9080'
+      environment:
+         - ENABLE_RATINGS=true
+         - GROUP_NUMBER=48
+    details:
+      image: 48/details
+      container_name: 48-details
+      depends_on:
+        - productpage
+      environment:
+        - SERVICE_VERSION=v1
+        - ENABLE_EXTERNAL_BOOK_SERVICE=true
+    reviews:
+      image: 48/reviews
+      container_name: 48-reviews
+      depends_on:
+        - productpage
+      environment:
+        - SERVICE_VERSION=v1
+        - ENABLE_RATINGS=false
+        - STAR_COLOR=black
+    ratings:
+      image: 48/ratings
+      container_name: 48-ratings
+      depends_on:
+        - reviews
+      environment:
+        - SERVICE_VERSION=v1
