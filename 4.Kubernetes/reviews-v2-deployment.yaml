@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: reviews
-        image: 48/reviews-v2
+        image: gcr.io/polar-elf-367509/48/reviews-v2:v1
         imagePullPolicy: IfNotPresent
         env:
         - name: LOG_DIR

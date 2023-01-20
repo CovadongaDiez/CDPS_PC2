@@ -36,7 +36,7 @@ spec:
     spec:
       containers:
       - name: ratings
-        image: 48/ratings
+        image: gcr.io/polar-elf-367509/48/ratings:v1
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080
