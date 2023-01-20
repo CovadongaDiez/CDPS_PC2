@@ -21,10 +21,6 @@ services:
       container_name: 48-reviews
       depends_on:
         - productpage
-      environment:
-        - SERVICE_VERSION=v1
-        - ENABLE_RATINGS=false
-        - STAR_COLOR=black
     ratings:
       image: 48/ratings
       container_name: 48-ratings
