@@ -10,10 +10,11 @@ os.system("sudo apt-get update")
 os.system("sudo apt-get install -y python3-pip")
 
 #Instalamos las dependencias
-os.system("sed -i 's/urllib3==1.26.5/urllib3/g' practica_creativa2/bookinfo/src/productpage/requirements.txt")
 os.system("sed -i 's/chardet==3.0.4/chardet/g' practica_creativa2/bookinfo/src/productpage/requirements.txt")
-os.system("sed -i 's/greenlet==0.4.15/greenlet/g' practica_creativa2/bookinfo/src/productpage/requirements.txt")
 os.system("sed -i 's/gevent==1.4.0/gevent/g' practica_creativa2/bookinfo/src/productpage/requirements.txt")
+os.system("sed -i 's/greenlet==0.4.15/greenlet/g' practica_creativa2/bookinfo/src/productpage/requirements.txt")
+os.system("sed -i 's/urllib3==1.26.5/urllib3/g' practica_creativa2/bookinfo/src/productpage/requirements.txt")
+
 os.system("sudo pip3 install -r practica_creativa2/bookinfo/src/productpage/requirements.txt")
 
 #Creamos una variable de entorno con el número de grupo
